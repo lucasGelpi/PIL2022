@@ -34,7 +34,7 @@ class NotaView(View):
         # print(request.body)
         jd=json.loads(request.body)
         # print(jd)
-        Notas.objects.create(titulo=jd['titulo'], descripcion=jd['descripcion'], estado=jd['estado'], fecha_cierre=jd['fecha_cierre'])
+        Notas.objects.create(titulo=jd['titulo'], descripcion=jd['descripcion'], estado=jd['estado'], fecha_creacion=jd['fecha_creacion'], fecha_cierre=jd['fecha_cierre'])
         datos={'message':"Exito!"}
         return JsonResponse(datos)
 
